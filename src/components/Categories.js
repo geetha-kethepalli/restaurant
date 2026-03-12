@@ -6,8 +6,7 @@ import {
   FaIceCream,
   FaLeaf,
   FaPepperHot,
-  FaPizzaSlice,
-  FaDrumstickBite,
+  FaPizzaSlice
 } from "react-icons/fa";
 import { GiChopsticks } from "react-icons/gi";
 import "./Categories.css";
