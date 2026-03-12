@@ -9,7 +9,7 @@ import {
   FaPizzaSlice,
   FaDrumstickBite,
 } from "react-icons/fa";
-import { GiNoodles, GiChopsticks } from "react-icons/gi";
+import { GiChopsticks } from "react-icons/gi";
 import "./Categories.css";
 
 // 👇 Matching exactly with CATEGORIES in Home.js
