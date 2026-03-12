@@ -27,7 +27,7 @@ const OrderConfirmation = ({ orderData, onBackToHome }) => {
     // Slight delay so the initial opacity:0 is painted before we add --visible
     const t = setTimeout(() => setShow(true), 50);
     return () => clearTimeout(t);
-  }, []);
+  }, [summary]);
 
   return (
     <div className="oc-page-wrapper">
