@@ -1,0 +1,234 @@
+/* ============================================
+   ORDER CONFIRMATION PAGE STYLES
+   ============================================ */
+
+/* ── Page wrapper ── */
+.oc-page-wrapper {
+  max-width: 680px;
+  margin: 0 auto;
+  padding: 24px 16px 60px;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+/* ── Main confirmation card ── */
+.oc-card {
+  background-color: #fff;
+  border: 1px solid #eee;
+  border-radius: 16px;
+  padding: 40px 32px;
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.08);
+  text-align: center;
+  /* Fade-in initial state */
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+/* Triggered by JS once component mounts */
+.oc-card--visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ── Tick icon ── */
+.oc-tick-wrapper {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.oc-tick-circle {
+  width: 72px;
+  height: 72px;
+  border-radius: 50%;
+  background-color: #27ae60;
+  color: #fff;
+  font-size: 36px;
+  font-weight: 900;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 16px rgba(39, 174, 96, 0.35);
+}
+
+/* ── Heading & messages ── */
+.oc-thank-you-title {
+  margin: 0 0 12px;
+  font-size: 32px;
+  font-weight: 900;
+  color: #1a1a1a;
+}
+
+.oc-main-message {
+  font-size: 17px;
+  color: #444;
+  margin: 0 0 8px;
+  line-height: 1.6;
+}
+
+.oc-payment-message {
+  font-size: 15px;
+  color: #555;
+  margin: 0 0 28px;
+  line-height: 1.6;
+}
+
+/* Brand-coloured amount inside payment message */
+.oc-highlight-amount {
+  color: #e74c3c;
+}
+
+/* ── Per-restaurant order rows ── */
+.oc-orders-wrapper {
+  margin-bottom: 24px;
+  text-align: left;
+  border: 1px solid #eee;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.oc-order-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 14px 16px;
+  border-bottom: 1px solid #f5f5f5;
+  background-color: #fafafa;
+  gap: 12px;
+}
+
+.oc-order-left {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.oc-restaurant-icon {
+  font-size: 22px;
+  width: 40px;
+  height: 40px;
+  background-color: #fff;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.08);
+  flex-shrink: 0;
+}
+
+.oc-restaurant-name {
+  margin: 0;
+  font-size: 14px;
+  font-weight: 700;
+  color: #c0392b;
+}
+
+.oc-order-id {
+  margin: 3px 0 0;
+  font-size: 12px;
+  color: #888;
+}
+
+.oc-order-right {
+  text-align: right;
+  flex-shrink: 0;
+}
+
+.oc-order-amount {
+  margin: 0;
+  font-size: 15px;
+  font-weight: 800;
+  color: #333;
+}
+
+.oc-cod-badge {
+  font-size: 11px;
+  background-color: #fff8e1;
+  color: #e65100;
+  border: 1px solid #ffe082;
+  border-radius: 20px;
+  padding: 2px 8px;
+  display: inline-block;
+  margin-top: 4px;
+  font-weight: 600;
+}
+
+/* ── Delivery address recap ── */
+.oc-address-recap-box {
+  background-color: #f8f9fa;
+  border: 1px solid #eee;
+  border-radius: 10px;
+  padding: 14px 16px;
+  margin-bottom: 20px;
+  text-align: left;
+}
+
+.oc-address-recap-title {
+  margin: 0 0 6px;
+  font-size: 13px;
+  font-weight: 700;
+  color: #555;
+}
+
+.oc-address-recap-text {
+  margin: 0;
+  font-size: 13px;
+  color: #444;
+  line-height: 1.7;
+}
+
+.oc-instructions-text {
+  margin: 8px 0 0;
+  font-size: 12px;
+  color: #888;
+  font-style: italic;
+}
+
+/* ── ETA banner ── */
+.oc-eta-banner {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 12px 16px;
+  background-color: #e8f5e9;
+  border: 1px solid #a5d6a7;
+  border-radius: 10px;
+  margin-bottom: 20px;
+  font-size: 14px;
+  color: #1b5e20;
+}
+
+.oc-eta-icon {
+  font-size: 22px;
+}
+
+.oc-eta-text {
+  margin: 0;
+}
+
+/* ── Happy eating ── */
+.oc-happy-eating {
+  font-size: 22px;
+  font-weight: 800;
+  color: #e74c3c;
+  margin: 0 0 24px;
+  letter-spacing: 0.3px;
+}
+
+/* ── Back to home button ── */
+.oc-back-home-btn {
+  padding: 13px 32px;
+  background-color: #e74c3c;
+  color: #fff;
+  border: none;
+  border-radius: 10px;
+  font-size: 15px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background-color 0.15s;
+}
+
+.oc-back-home-btn:hover {
+  background-color: #c0392b;
+}

@@ -1,0 +1,86 @@
+/* ============================================
+   RESTAURANT CARD STYLES
+   ============================================ */
+
+/* ── Card root ── */
+.rc-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 320px;          /* Fixed height — uniform cards */
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  background-color: white;
+  transition: transform 0.2s;
+  cursor: pointer;
+}
+
+.rc-card:hover {
+  transform: translateY(-4px);
+}
+
+/* ── Restaurant image ── */
+.rc-card__image {
+  width: 100%;
+  height: 160px;          /* Fixed image height */
+  object-fit: cover;      /* No stretching */
+}
+
+/* ── Card content area ── */
+.rc-card__content {
+  padding: 12px;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;           /* Takes remaining space */
+  justify-content: space-between;
+}
+
+/* ── Restaurant name — clamped to 2 lines ── */
+.rc-card__name {
+  margin: 0 0 6px;
+  font-size: 15px;
+  color: #333;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;  /* Max 2 lines */
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  line-height: 1.3;
+  min-height: 38px;       /* Always reserves 2-line space */
+}
+
+/* ── Rating ── */
+.rc-card__rating {
+  margin: 0 0 4px;
+  font-size: 13px;
+  color: #f39c12;
+}
+
+/* ── Cuisine — single line with ellipsis ── */
+.rc-card__cuisine {
+  margin: 0;
+  font-size: 12px;
+  color: #777;
+  white-space: nowrap;    /* Single line */
+  overflow: hidden;
+  text-overflow: ellipsis; /* Shows "..." if too long */
+}
+
+/* ── View Details button ── */
+.rc-card__btn {
+  width: 100%;            /* Full width */
+  padding: 8px;
+  background-color: #e74c3c;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 13px;
+  font-weight: bold;
+  margin-top: 10px;
+  transition: background-color 0.15s;
+}
+
+.rc-card__btn:hover {
+  background-color: #c0392b;
+}

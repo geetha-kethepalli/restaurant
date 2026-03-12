@@ -1,0 +1,91 @@
+/* ============================================
+   STEP INDICATOR STYLES
+   Used across all checkout pages:
+   Cart(1) → Order Summary(2) → Address(3) → Payment(4) → Confirmation(5)
+   ============================================ */
+
+/* ── Wrapper ── */
+.si-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 32px;
+  flex-wrap: wrap;
+  padding: 16px;
+  background-color: #fafafa;
+  border-radius: 12px;
+  border: 1px solid #f0f0f0;
+}
+
+/* ── Step item (circle + label stacked) ── */
+.si-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+}
+
+/* ── Step circle — default (pending) state ── */
+.si-circle {
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 13px;
+  font-weight: 800;
+  transition: all 0.2s;
+  background-color: #ddd;
+  color: #aaa;
+  box-shadow: none;
+}
+
+/* Active step */
+.si-circle--active {
+  background-color: #e74c3c;
+  color: #fff;
+  box-shadow: 0 0 0 4px rgba(231, 76, 60, 0.18);
+}
+
+/* Completed step */
+.si-circle--done {
+  background-color: #27ae60;
+  color: #fff;
+  box-shadow: none;
+}
+
+/* ── Step label — default (pending) state ── */
+.si-label {
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.4px;
+  white-space: nowrap;
+  color: #aaa;
+  font-weight: 500;
+}
+
+/* Active step label */
+.si-label--active {
+  color: #e74c3c;
+  font-weight: 700;
+}
+
+/* Completed step label */
+.si-label--done {
+  color: #27ae60;
+}
+
+/* ── Connector line — default (pending) state ── */
+.si-line {
+  height: 2px;
+  width: 40px;
+  margin-bottom: 20px;
+  transition: background-color 0.3s;
+  background-color: #ddd;
+}
+
+/* Completed connector */
+.si-line--done {
+  background-color: #27ae60;
+}

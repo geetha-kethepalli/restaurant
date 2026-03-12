@@ -1,0 +1,308 @@
+/* ============================================
+   ADDRESS PAGE STYLES
+   ============================================ */
+
+/* ── Page wrapper ── */
+.addr-page-wrapper {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 24px 16px 60px;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+/* ── Page header ── */
+.addr-page-header {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 28px;
+}
+
+.addr-page-title {
+  margin: 0;
+  font-size: 26px;
+  font-weight: 800;
+  color: #1a1a1a;
+}
+
+.addr-page-subtitle {
+  margin: 4px 0 0;
+  font-size: 14px;
+  color: #888;
+}
+
+.addr-back-btn {
+  background: none;
+  border: 1.5px solid #ddd;
+  border-radius: 8px;
+  padding: 8px 16px;
+  font-size: 14px;
+  cursor: pointer;
+  color: #555;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.addr-back-btn:hover {
+  border-color: #bbb;
+  color: #333;
+}
+
+/* ── Main layout ── */
+.addr-main-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 320px;
+  gap: 24px;
+  align-items: start;
+}
+
+.addr-right-col {
+  position: sticky;
+  top: 20px;
+}
+
+/* ── Form card ── */
+.addr-form-card {
+  background-color: #fff;
+  border: 1px solid #eee;
+  border-radius: 12px;
+  padding: 28px;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
+}
+
+/* ── Address type selector ── */
+.addr-type-row {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 20px;
+}
+
+.addr-type-btn {
+  flex: 1;
+  padding: 10px;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.15s;
+  background-color: #f5f5f5;
+  color: #555;
+  border: 2px solid #eee;
+}
+
+.addr-type-btn--active {
+  background-color: #e74c3c;
+  color: #fff;
+  border: 2px solid #e74c3c;
+}
+
+/* ── Divider ── */
+.addr-divider {
+  border-top: 1px solid #f0f0f0;
+  margin-bottom: 20px;
+}
+
+/* ── Two-column row ── */
+.addr-row {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  gap: 16px;
+}
+
+/* ── Field wrapper ── */
+.addr-field-wrapper {
+  margin-bottom: 18px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.addr-label {
+  font-size: 13px;
+  font-weight: 600;
+  color: #444;
+}
+
+.addr-required-star {
+  color: #e74c3c;
+}
+
+/* ── Base input / select / textarea ── */
+.addr-input {
+  width: 100%;
+  padding: 10px 12px;
+  border: 1.5px solid #ddd;
+  border-radius: 6px;
+  font-size: 14px;
+  color: #333;
+  outline: none;
+  transition: border-color 0.15s;
+  box-sizing: border-box;
+  font-family: inherit;
+  background-color: #fff;
+}
+
+.addr-input:focus {
+  border-color: #e74c3c;
+}
+
+/* Error state — applied dynamically via inline style override for borderColor/backgroundColor */
+/* The JS inputStyle() function handles the two dynamic properties; CSS handles the rest */
+
+/* ── Phone input wrapper ── */
+.addr-phone-wrapper {
+  display: flex;
+  align-items: stretch;
+}
+
+.addr-phone-prefix {
+  padding: 10px 12px;
+  background-color: #f5f5f5;
+  border: 1.5px solid #ddd;
+  border-right: none;
+  border-radius: 6px 0 0 6px;
+  font-size: 14px;
+  color: #555;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+/* Phone input itself — overrides applied inline for radius + border-left */
+.addr-input--phone {
+  border-radius: 0 6px 6px 0;
+  border-left: none;
+}
+
+/* Textarea — resize and line-height variant */
+.addr-input--textarea {
+  resize: vertical;
+  line-height: 1.5;
+}
+
+/* ── Error text ── */
+.addr-error-text {
+  font-size: 12px;
+  color: #e74c3c;
+  margin-top: 2px;
+}
+
+/* ── Error banner ── */
+.addr-error-banner {
+  padding: 12px 16px;
+  background-color: #fff3f3;
+  border: 1px solid #ffcdd2;
+  border-radius: 8px;
+  color: #c62828;
+  font-size: 13px;
+  font-weight: 600;
+  margin-bottom: 16px;
+}
+
+/* ── Proceed button ── */
+.addr-proceed-btn {
+  width: 100%;
+  padding: 14px;
+  background-color: #27ae60;
+  color: #fff;
+  border: none;
+  border-radius: 10px;
+  font-size: 15px;
+  font-weight: 700;
+  cursor: pointer;
+  letter-spacing: 0.3px;
+  transition: background-color 0.15s;
+  margin-bottom: 10px;
+}
+
+.addr-proceed-btn:hover {
+  background-color: #219a52;
+}
+
+/* ── Secure note ── */
+.addr-secure-note {
+  text-align: center;
+  font-size: 11px;
+  color: #aaa;
+  margin: 0;
+}
+
+/* ============================================
+   ORDER MINI SUMMARY (right sidebar)
+   ============================================ */
+
+.addr-mini-summary-card {
+  background-color: #fff;
+  border: 1px solid #eee;
+  border-radius: 12px;
+  padding: 18px;
+  margin-bottom: 16px;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
+}
+
+.addr-mini-summary-title {
+  margin: 0 0 14px;
+  font-size: 15px;
+  font-weight: 800;
+  color: #1a1a1a;
+}
+
+.addr-mini-restaurant-row {
+  margin-bottom: 12px;
+  padding-bottom: 12px;
+  border-bottom: 1px dashed #f0f0f0;
+}
+
+.addr-mini-restaurant-name {
+  font-size: 13px;
+  font-weight: 700;
+  color: #c0392b;
+  margin-bottom: 6px;
+}
+
+.addr-mini-breakdown {
+  display: flex;
+  justify-content: space-between;
+  font-size: 12px;
+  color: #666;
+  padding: 2px 0;
+}
+
+.addr-mini-divider {
+  border-top: 2px solid #f0f0f0;
+  margin: 10px 0;
+}
+
+.addr-mini-grand-total {
+  display: flex;
+  justify-content: space-between;
+  font-size: 15px;
+  font-weight: 700;
+  color: #1a1a1a;
+}
+
+/* ============================================
+   DELIVERY PROMISE CARD
+   ============================================ */
+
+.addr-promise-card {
+  background-color: #f0fff4;
+  border: 1px solid #a5d6a7;
+  border-radius: 12px;
+  padding: 16px 18px;
+}
+
+.addr-promise-title {
+  margin: 0 0 12px;
+  font-size: 14px;
+  font-weight: 700;
+  color: #1b5e20;
+}
+
+.addr-promise-row {
+  display: flex;
+  gap: 10px;
+  font-size: 13px;
+  color: #2e7d32;
+  margin-bottom: 8px;
+  line-height: 1.4;
+}
